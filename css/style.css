@@ -26,23 +26,7 @@ body {
     transition: .5s ease-in-out;
     background-size: cover;
     background-repeat: no-repeat;
-    background: #26282e;
-}
-
-* {
-    scrollbar-color: #3d4149 #26282e;
-    scrollbar-width: thin;
-}
-
-::-webkit-scrollbar {
-    width: 7px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #3d4149;
-}
-::-webkit-scrollbar-track {
-    background: #26282e;
+    background: #ebf2fa;
 }
 
 
@@ -56,18 +40,10 @@ img {
     from {
         opacity: 0;
         transform: translateY(-60px);
-        box-shadow: 0 0 20px 0 #00000000;
+        box-shadow: 0 0 20px 0 #ebf2fa00;
     }
 }
 
-.nav {
-    animation: fromTop .8s cubic-bezier(.58, -.11, .54, 1.29);
-    border-bottom: 2px solid rgba(52, 54, 73, 0.5);
-    background: #26282e00;
-    padding-top: 10px;
-    box-shadow: 0 0 50px 0 #00000094;
-    white-space: nowrap;
-}
 
 .contact {
     cursor: pointer;
@@ -128,8 +104,13 @@ img {
     margin-left: 10px;
 }
 
+.aboutMe {
+    color: #111111;
+}
+
 .welcome {
     font-size: 40px;
+    color: #111111;
     margin: 90px auto 50px auto;
     font-weight: 700;
     font-family: var(--secFont);
@@ -144,7 +125,6 @@ img {
 
 #about {
     position: relative;
-    animation: toRight 1s ease;
 }
 
 @keyframes toRight {
@@ -199,21 +179,7 @@ img {
     -webkit-user-select: none;
 }
 
-.card1 {
-    animation: appear 1s ease-in-out;
-}
 
-.card2 {
-    animation: appear 2s ease-in-out;
-}
-
-.card3 {
-    animation: appear 3s ease-in-out;
-}
-
-.card4 {
-    animation: appear 4s ease-in-out;
-}
 
 .card {
     position: relative;
@@ -310,17 +276,15 @@ background-color: #2C2D32;
 
 .projs {
     position: absolute;
-    margin: 5%2%;
+    margin: -3%30%;
     z-index: 1;
     transition: 1s ease-in-out;
-    animation: appear2 3s ease-in-out;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
 }
 
 .projs span {
-    writing-mode: vertical-lr;
     transform: rotate(180deg);
     text-align: right;
     text-orientation: sideways;
@@ -331,9 +295,6 @@ background-color: #2C2D32;
     font-family: var(--secFont);
 }
 
-.body {
-    animation: appear2 2s ease-in-out;
-}
 
 @keyframes disappear {
     from {
