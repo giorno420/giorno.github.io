@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" style="font-family: Lucida Console;">
+<a style="font-size: 20px; font-family: Arial, Helvetica, sans-serif; color: #63e2ff;" href="/"><u> < go back</u></a><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My projects</title>
+  <link rel="icon"
+    type="image/png"
+    href="/img/icon.jpg">
+</head>
+<body>
+    <div style="text-align: center; margin-top: 2em; font-size: 30px;">
+        <u>Projects</u>
+
+    </div>
+    <div style="margin-top: 4em;"></div>
+    <style>
+
+#asd {
+    font-size: 23px;
+    margin-left: 100px;
+}
+#asd.date {
+    text-align: right;
+}
+    </style>
+    <script>
+
+        async function getData(){
+            let data = await fetch("https://api.github.com/users/giorno420/repos").then(data => data.json());
+            
+            let dataTag = document.getElementById("asd");
+            
+
+            for(let i = 0; i < data.length; i++){
+                if (data[i]["fork"]){}
+                else if (!data[i]["fork"]){
+                    let ptag = document.createElement("p");
+                    
+                    ptag.innerHTML = `<li><b><a href="${data[i].html_url}">${data[i].full_name}</a></b><br> ${data[i]["description"]} </li>`;
+                    
+                    dataTag.appendChild(ptag);
+                }
+            }
+        }
+        getData();
+    </script>
+
+    <div id="asd">
+        
+    </div>
+    
+</body>
+
+</html><div style="margin-bottom: 4em;"></div>
