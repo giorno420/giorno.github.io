@@ -295,6 +295,17 @@ background-color: #2C2D32;
     font-family: var(--secFont);
 }
 
+.projs a {
+    color: var(--hoverCol2);
+    text-align: right;
+    text-orientation: sideways;
+    white-space: nowrap;
+    color: var(--hoverCol2);
+    opacity: .3;
+    text-transform: uppercase;
+    font-family: var(--secFont);
+}
+
 
 @keyframes disappear {
     from {
